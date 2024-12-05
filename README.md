@@ -10,6 +10,8 @@
 
 ## **Class LoginFrame**
 
+Class `LoginFrame` adalah JFrame (window) yang menampilkan form login untuk aplikasi. Class ini mengatur layout, komponen GUI, dan logika untuk memverifikasi login pengguna.
+
 ### **1. Atribut**
 
 - **userLabel**
@@ -76,7 +78,19 @@
 
 - `add(loginButton)`: Menambahkan tombol login ke frame.
 
-### **5. Hasil**
+## **Class Main**
+
+Class `Main` adalah titik masuk utama untuk menjalankan aplikasi Swing. Kelas ini digunakan untuk menampilkan LoginFrame ketika aplikasi dijalankan.
+
+### **1. Method `main`**
+
+- Method ini adalah titik awal dari aplikasi Java, yang dijalankan pertama kali.
+
+- `SwingUtilities.invokeLater()` memastikan bahwa antarmuka pengguna (GUI) dijalankan di thread yang tepat (thread event dispatching). Ini adalah cara yang benar untuk membuat dan menampilkan komponen GUI di Swing, karena Swing tidak aman untuk digunakan di banyak thread secara bersamaan.
+
+- `new LoginFrame().setVisible(true);`: Membuat objek `LoginFrame` dan menampilkan window login dengan memanggil `setVisible(true)`.
+
+## **Hasil**
 
 ![alt text](Resource/LoginFrame/image.png)
 
